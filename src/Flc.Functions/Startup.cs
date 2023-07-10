@@ -14,10 +14,10 @@ namespace Flc.Functions
 {
     public class Startup : FunctionsStartup
     {
-        public override void ConfigureAppConfiguration(IFunctionsConfigurationBuilder builder)
-        {
-            var configuration = builder.ConfigureAppSettings();
-        }
+        //public override void ConfigureAppConfiguration(IFunctionsConfigurationBuilder builder)
+        //{
+        //    var configuration = builder.ConfigureAppSettings();
+        //}
 
         public override void Configure(IFunctionsHostBuilder builder)
         {

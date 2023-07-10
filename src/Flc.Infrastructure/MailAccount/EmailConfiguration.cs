@@ -6,12 +6,12 @@ namespace Flc.Infrastructure.MailAccount;
 public class EmailConfiguration
 {
     [Required]
-    public string From { get; set; } = default!;
-    public string FromName { get; set; } = default!;
-    public string HostAddress { get; set; } = default!;
-    public string AccountSender { get; set; } = default!;
-    public string Password { get; set; } = default!;
-    public bool EnabledSendMails { get; set; }
+    public string From { get; set; } = "rvmatos2@gmail.com";
+    public string FromName { get; set; } = "Florescer - Lembrete";
+    public string HostAddress { get; set; } = "smtp.office365.com";
+    public string AccountSender { get; set; } = "rvmatos2@gmail.com";
+    public string Password { get; set; } = "HH~YvN|6>f-^*Xk3";
+    public bool EnabledSendMails { get; set; } = true;
 
     /// <summary>
     /// Additional emails used for following all e-mails without impact the original e-mail destination
