@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flc.Infrastructure", "Flc.Infrastructure\Flc.Infrastructure.csproj", "{7792E2F0-A5B7-4CCD-A424-31742FD35260}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flc.Functions", "Flc.Functions\Flc.Functions.csproj", "{DCA51FB5-A576-4085-8F27-C145D33EBB19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7792E2F0-A5B7-4CCD-A424-31742FD35260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7792E2F0-A5B7-4CCD-A424-31742FD35260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7792E2F0-A5B7-4CCD-A424-31742FD35260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7792E2F0-A5B7-4CCD-A424-31742FD35260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA51FB5-A576-4085-8F27-C145D33EBB19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA51FB5-A576-4085-8F27-C145D33EBB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA51FB5-A576-4085-8F27-C145D33EBB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA51FB5-A576-4085-8F27-C145D33EBB19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D0282C9-9909-495B-8306-5270B1A4DBCC}
+	EndGlobalSection
+EndGlobal
