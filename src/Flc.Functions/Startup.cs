@@ -1,4 +1,5 @@
-﻿using Flc.Functions.Extensions;
+﻿using Flc.Functions.Adapters;
+using Flc.Functions.Extensions;
 using Flc.Infrastructure.MailAccount;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,8 @@ namespace Flc.Functions
             var configuration = builder.GetContext().Configuration;
 
             builder.Services
+                .Configure<DbSettings>(configuration.GetSection("DbSettings"))
+                .AddSingleton<DataContext>()
                 .AddSingleton(configuration.SafeGet<EmailConfiguration>())
                 .AddInfrastructure(configuration);
         }

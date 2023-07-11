@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Flc.Functions.Constants;
 using Flc.Infrastructure.Adapters;
 using Flc.Infrastructure.MailAccount;
 using Flc.Infrastructure.Models;
@@ -20,7 +21,7 @@ namespace Flc.Functions
         }
 
         [FunctionName("SchedulerProcess")]
-        public async Task Run([TimerTrigger("0 5 * * 1-5", RunOnStartup = true)] TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 6 * * 1-5")] TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"[INICIO] Processo de Notificação: {DateTime.Now}");
             await Notifica();
@@ -30,10 +31,10 @@ namespace Flc.Functions
         public async Task Notifica()
         {
             var notificacao = new Notificacao();
-            var destinatarios = new List<string>() { "rvmatos@gmail.com", "wagnersouzadepaula@gmail.com", "patriciawentzm@gmail.com", "felipemarmor@hotmail.com", "joorgenho@gmail.com" };
+            var destinatarios = new List<string>() { "rvmatos@gmail.com", "wagnersouzadepaula@gmail.com", "patriciawentzm@gmail.com", "felipemarmor@hotmail.com", "joorgenho@gmail.com" };            
 
-            notificacao.Subject = "Subject Test";
-            notificacao.Body = "<h1>Hello, its a Body Message Test</h1>";
+            notificacao.Subject = "Florescer - Lembrete Semanal de Cuidados com o seu Jardim";
+            notificacao.Body = EmailBody.header + EmailBody.template + EmailBody.footer;
             notificacao.To = destinatarios;
 
             await _sendMail.Send(notificacao);
