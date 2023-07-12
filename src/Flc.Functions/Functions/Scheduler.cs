@@ -21,7 +21,7 @@ namespace Flc.Functions
         }
 
         [FunctionName("SchedulerProcess")]
-        public async Task Run([TimerTrigger("0 6 * * 1-5")] TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 6 * * 1-5", RunOnStartup = true)] TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"[INICIO] Processo de Notificação: {DateTime.Now}");
             await Notifica();
@@ -31,7 +31,7 @@ namespace Flc.Functions
         public async Task Notifica()
         {
             var notificacao = new Notificacao();
-            var destinatarios = new List<string>() { "rvmatos@gmail.com", "wagnersouzadepaula@gmail.com", "patriciawentzm@gmail.com", "felipemarmor@hotmail.com", "joorgenho@gmail.com" };            
+            var destinatarios = new List<string>() { "rvmatos@gmail.com", "wagnersouzadepaula@gmail.com", "patriciawentzm@gmail.com", "felipemarmor@hotmail.com", "joorgenho@gmail.com", "professor.zanuz@gmail.com" };
 
             notificacao.Subject = "Florescer - Lembrete Semanal de Cuidados com o seu Jardim";
             notificacao.Body = EmailBody.header + EmailBody.template + EmailBody.footer;

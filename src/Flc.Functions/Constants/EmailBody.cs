@@ -86,7 +86,7 @@
             "        <p>Aproveite o tempo para relaxar e apreciar a beleza da natureza que a Samambaia traz ao seu ambiente.</p>\n" +
             "        <div class=\"footer\">\n" +
             "            <p class=\"signature\">Atenciosamente,<br>Equipe Florescer</p>\n" +
-            "            <a href=\"https://www.example.com\" class=\"button\">Abrir E-mail</a>\n" +
+            "            <img alt=\"Logo do projeto Florescer.\" src=\"https://senac-pd1.github.io/FlorescerMedia/imagens/logoFlorescer.png\">" +
             "        </div>\n" +
             "    </div>\n" +
             "</body>\n" +
