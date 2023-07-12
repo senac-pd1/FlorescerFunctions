@@ -21,7 +21,7 @@ namespace Flc.Functions
         }
 
         [FunctionName("SchedulerProcess")]
-        public async Task Run([TimerTrigger("0 6 * * 1-5")] TimerInfo myTimer, ILogger log)
+        public async Task Run([TimerTrigger("0 19 * * 3")] TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"[INICIO] Processo de Notificação: {DateTime.Now}");
             await Notifica();
